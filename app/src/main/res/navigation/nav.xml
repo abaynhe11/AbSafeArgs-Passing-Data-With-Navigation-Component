@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/examInformationFragment">
+
+    <fragment
+        android:id="@+id/examInformationFragment"
+        android:name="com.google.firebase.quickstart.auth.absafeargs_passingdatawithnavigationcomponent.ExamInformationFragment"
+        android:label="ExamInformationFragment" >
+        <action
+            android:id="@+id/action_examInformationFragment_to_examScoreFragment"
+            app:destination="@id/examScoreFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/examScoreFragment"
+        android:name="com.google.firebase.quickstart.auth.absafeargs_passingdatawithnavigationcomponent.ExamScoreFragment"
+        android:label="ExamScoreFragment" >
+        <argument
+            android:name="exam"
+            app:argType="com.google.firebase.quickstart.auth.absafeargs_passingdatawithnavigationcomponent.Exam" />
+    </fragment>
+</navigation>
